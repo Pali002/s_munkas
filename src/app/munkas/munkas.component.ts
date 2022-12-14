@@ -7,7 +7,7 @@ import { ApiService } from '../shared/api.service';
   styleUrls: ['./munkas.component.scss']
 })
 export class MunkasComponent implements OnInit {
-  employees !: any;
+  employees : any;
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
@@ -17,7 +17,6 @@ export class MunkasComponent implements OnInit {
   getEmployees() {
     this.api.getEmployees().subsrible({
       next: (data: any) => {
-        console.log(data); 
         this.employees = data;
       },
       error: (err: any) => {
