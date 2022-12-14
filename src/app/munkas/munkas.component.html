@@ -1,0 +1,18 @@
+<h2>Dolgozók</h2>
+
+<table class="table table-striped table-info">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Név</th>
+            <th>Település</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.city}}</td>
+        </tr>
+    </tbody>
+</table>
